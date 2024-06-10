@@ -1,13 +1,53 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>AngularNewAdminTemplate</title>
+  <title>Angular-Metronic-Admin-Template</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  
+  <!-- SPLASH SCREEN-->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .splash-screen {
+      position: absolute;
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #f2f3f8;
+      font-family: Poppins, Helvetica, 'sans-serif';
+    }
+
+    .splash-screen img {
+      margin-left: calc(100vw - 100%);
+      margin-bottom: 30px;
+    }
+
+    #root {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+
 </head>
-<body>
-  <app-root></app-root>
+
+<body root id="kt_body" class="mat-typography">
+  <div id="splash-screen" class="splash-screen">
+    <img src="logo.svg" alt="Logo" />
+    <span>Loading ...</span>
+  </div>
 </body>
+
 </html>
